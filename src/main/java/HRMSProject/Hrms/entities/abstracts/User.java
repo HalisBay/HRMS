@@ -10,8 +10,8 @@ import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
 import javax.persistence.Table;
 import javax.persistence.Transient;
-
-import com.sun.istack.NotNull;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -28,14 +28,17 @@ public abstract class User {
 	@Id
 	@GeneratedValue(strategy =  GenerationType.IDENTITY)
 	@NotNull
+	@NotBlank
 	@Column(name = "id")
 	private int id;
 	
 	@NotNull
+	@NotBlank
 	@Column(name = "email")
 	private String email;
 	
 	@NotNull
+	@NotBlank
 	@Column(name = "password")
 	private String password;
 	

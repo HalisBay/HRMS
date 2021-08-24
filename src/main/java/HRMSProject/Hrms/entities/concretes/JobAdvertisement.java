@@ -10,9 +10,11 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 
 import org.hibernate.annotations.CreationTimestamp;
-import com.sun.istack.NotNull;
+
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -31,6 +33,7 @@ public class JobAdvertisement {
 	private int id;
 	
 	@NotNull
+	@NotBlank
 	@Column(name = "job_advertisement_description")
 	private String description;
 	
@@ -43,18 +46,22 @@ public class JobAdvertisement {
 	private int maxSalary;
 	
 	@NotNull
+	@NotBlank
 	@Column(name = "job_advertisement_open_positions")
 	private int openPosition;
 	
 	@NotNull
+	@NotBlank
 	@Column(name = "job_advertisement_latest_apply_time")
 	private LocalDate latestApplyTime;
 	
 	@NotNull
+	@NotBlank
 	@Column(name = "is_job_advertisement_activated")
 	private boolean isActivated;
 	
 	@NotNull
+	@NotBlank
 	@CreationTimestamp
 	@Column(name = "job_advertisement_create_time")
 	private LocalDate createdTime;

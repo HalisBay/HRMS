@@ -8,9 +8,10 @@ import HRMSProject.Hrms.entities.concretes.JobAdvertisement;
 
 public interface JobAdvertisementService {
 	
-	DataResult <List<JobAdvertisement>> getAll();
+	
 	Result add(JobAdvertisement jobAdvertisement);
 	
+	DataResult <List<JobAdvertisement>> getAll();
 	DataResult <List<JobAdvertisement>>  getAllByIsActivatedTrue();
 	DataResult <List<JobAdvertisement>> getAllByIsActivatedTrueOrderByCreatedTimeDesc();
 	DataResult <List<JobAdvertisement>> getAllByEmployer_IdAndIsActivatedTrue(int employerId);

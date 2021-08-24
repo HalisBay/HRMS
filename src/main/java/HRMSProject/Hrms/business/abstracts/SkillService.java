@@ -4,12 +4,12 @@ import java.util.List;
 
 import HRMSProject.Hrms.core.utilities.results.DataResult;
 import HRMSProject.Hrms.core.utilities.results.Result;
-import HRMSProject.Hrms.entities.concretes.JobPosition;
+import HRMSProject.Hrms.entities.concretes.Skill;
 
-public interface JobPositionService {
+public interface SkillService {
 	
-	Result addJobPosition(JobPosition jobPosition);
+	Result add(Skill skill);
 	
-	DataResult<List<JobPosition>> getAll();
+	DataResult<List<Skill>> getAll();
 
 }

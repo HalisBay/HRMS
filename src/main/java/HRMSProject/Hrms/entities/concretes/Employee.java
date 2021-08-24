@@ -4,8 +4,8 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.PrimaryKeyJoinColumn;
 import javax.persistence.Table;
-
-import com.sun.istack.NotNull;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 
 import HRMSProject.Hrms.entities.abstracts.User;
 import lombok.AllArgsConstructor;
@@ -23,10 +23,12 @@ import lombok.NoArgsConstructor;
 public class Employee extends User {
 	
 	@NotNull
+	@NotBlank
 	@Column(name = "employee_name")
 	private String name;
 	
 	@NotNull
+	@NotBlank
 	@Column(name = "employee_surname")
 	private String surname;
 	

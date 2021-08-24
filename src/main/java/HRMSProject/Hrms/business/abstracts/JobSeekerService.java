@@ -7,8 +7,9 @@ import HRMSProject.Hrms.core.utilities.results.Result;
 import HRMSProject.Hrms.entities.concretes.JobSeeker;
 
 public interface JobSeekerService {
-
-	DataResult<List<JobSeeker>> getAll();
 	
 	Result add(JobSeeker jobSeeker);
+	
+	DataResult<List<JobSeeker>> getAll();
+
 }
