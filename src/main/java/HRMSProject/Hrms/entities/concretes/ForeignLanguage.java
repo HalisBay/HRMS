@@ -8,6 +8,8 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -33,6 +35,8 @@ public class ForeignLanguage {
 	@Column(name = "language_name")
 	private String languageName;
 	
+	@Min(value = 1)
+	@Max(value = 5)
 	@Column(name = "language_level")
 	private int languageLevel;
 	
