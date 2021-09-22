@@ -11,6 +11,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.FieldError;
 import org.springframework.web.bind.MethodArgumentNotValidException;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -26,6 +27,7 @@ import HRMSProject.Hrms.entities.concretes.Experience;
 
 @RestController
 @RequestMapping("/api/experiences")
+@CrossOrigin
 public class ExperiencesController {
 	
 	private ExperienceService experienceService;

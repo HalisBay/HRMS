@@ -61,4 +61,9 @@ public class JobAdvertisementManager implements JobAdvertisementService {
 		
 	}
 
+	@Override
+	public DataResult<JobAdvertisement> findById(int jobAdvertisementId) {
+		return new SuccessDataResult<JobAdvertisement>(this.jobAdvertisementDao.findById(jobAdvertisementId).get(),"Id ye göre listelendi");
+	}
+
 }

@@ -46,27 +46,31 @@ public class JobAdvertisement {
 	private int maxSalary;
 	
 	@NotNull
-	@NotBlank
 	@Column(name = "job_advertisement_open_positions")
 	private int openPosition;
 	
 	@NotNull
-	@NotBlank
 	@Column(name = "job_advertisement_latest_apply_time")
 	private LocalDate latestApplyTime;
 	
 	@NotNull
-	@NotBlank
 	@Column(name = "is_job_advertisement_activated")
 	private boolean isActivated;
 	
 	@NotNull
-	@NotBlank
 	@CreationTimestamp
 	@Column(name = "job_advertisement_create_time")
-	private LocalDate createdTime;
+	private LocalDate createdTime=LocalDate.now();
 	
+	@NotNull
+	@NotBlank
+	@Column(name ="work_type")
+	private String workType;
 	
+	@NotNull
+	@NotBlank
+	@Column(name = "work_time")
+	private String workTime;
 	
 	@ManyToOne
 	@JoinColumn(name = "id")

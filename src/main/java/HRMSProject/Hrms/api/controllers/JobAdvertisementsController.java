@@ -50,7 +50,10 @@ public class JobAdvertisementsController {
 		
 		return this.jobAdvertisementService.getAll();
 	}
-
+	@GetMapping("/findById")
+	public DataResult<JobAdvertisement> findById(int id){
+		return this.jobAdvertisementService.findById(id);
+	}
 	@GetMapping("/findAllByIsActivedTrue")
 	public DataResult<List<JobAdvertisement>> getAllByIsActivatedTrue() {
 		return this.jobAdvertisementService.getAllByIsActivatedTrue();
