@@ -22,24 +22,24 @@ Bu proje, insan kaynakları yönetimini kolaylaştırmak için geliştirilmiş b
 
 1. **Depoyu Klonlayın:**
 
-   ```bash
-   git clone https://github.com/HalisBay/HRMS.git
-   cd HRMS
-   ```
+```bash
+git clone https://github.com/HalisBay/HRMS.git
+cd HRMS
+```
 2. **Bağımlılıkları Yükleyin:**
-   ```bash
-   mvn install
-   ```
+```bash
+mvn install
+```
 4. **Veritabanı Yapılandırması:**
-  ```bash
-  spring.datasource.url=jdbc:postgresql://localhost:5432/your_database_name
-  spring.datasource.username=your_username
-  spring.datasource.password=your_password
-  ```
+```bash
+spring.datasource.url=jdbc:postgresql://localhost:5432/your_database_name
+spring.datasource.username=your_username
+spring.datasource.password=your_password
+```
 6. **Programı Çalıştırın:**
-  ```
-   mvn spring-boot:run
-  ```
+```
+mvn spring-boot:run
+```
 7. **API Dokümantasyonu:**
   Uygulama çalıştıktan sonra, Swagger arayüzüne http://localhost:8080/swagger-ui.html adresinden erişebilirsiniz.
 
